@@ -1,0 +1,24 @@
+{
+  "name": "kaonaServer",
+  "version": "1.0.0",
+  "description": "Back-end app. Kaona is an application to share / find art works by art fans, shop owners, gallery owners and museums.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libreyextremo/kaonaServer.git"
+  },
+  "keywords": [],
+  "author": "Jose Maria 'Joey' Sobrinos Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libreyextremo/kaonaServer/issues"
+  },
+  "homepage": "https://github.com/libreyextremo/kaonaServer#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11"
+  }
+}
