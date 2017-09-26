@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-require('mongoose-type-email');
 const Schema = mongoose.Schema;
 
 const ArtType = ["Ceramic Art","Digital Art", "Drawing", "Glass Art","Jewelry",
@@ -36,15 +35,10 @@ const KArtWorkModelSchema = new Schema({
 
 const KUserModelSchema = new Schema({
   KU_Username: {type: String, required: [true, 'User name field is required'] },
-  KU_Password: {type: String, required: [true, 'Password field is required'] },
   KU_Name: {type: String, required: [true, 'Name field is required'] },
   KU_Surname: {type: String, required: [true, 'Surname field is required'] },
-  KU_Address: String,
   KU_DescriptionBio: String,
   KU_Type : {type: UserType, required: [true, 'User type is required'] },
-  KU_Email: {type: mongoose.SchemaTypes.Email, required: [true, 'Email is required'] },
-  KU_Phone: String,
-  KU_ID_Pass_Recovery: String,
   KU_ArtWorkList: [KArtWorkModelSchema]
 });
 

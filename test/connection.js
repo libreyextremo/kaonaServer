@@ -24,7 +24,9 @@ beforeEach(function(done){
   // drop collections that will be inserted
   //console.log('before test actions: drop kusers collection');
   mongoose.connection.collections.kusers.drop(function(){
-  done();
+    mongoose.connection.collections.kprofiles.drop(function(){
+      done();
+    });
   });
 });
 
