@@ -1,7 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-// set reply to "localhost:4000/api/clients" get request
+// set reply to "localhost:4000/api/" get request
+// get art list from the db
+router.get('/', function(req, res){
+  console.log('GET api/ request');
+  res.send({type: 'GET'});
+});
+
+// set reply to "localhost:4000/api/art" get request
 // get art list from the db
 router.get('/art', function(req, res){
   console.log('GET api/art request');
