@@ -15,21 +15,21 @@ describe('User collection tests', function(){
   it('Saving a record in kusers and kprofiles collections', function(done) {
 
     var profileRecord1 = new KProfileModel({
-      KU_Username: 'barackobama',
-      KU_Password: 'iambarack',
-      KU_Address: '1600 Pennsylvania Ave NW, Washington, DC 20500, EE. UU',
-      KU_Email: 'barackobama@whitehouse.usa',
-      KU_Phone: '',
-      KU_ID_Pass_Recovery: ''
+      KP_Username: 'barackobama',
+      KP_Password: 'iambarack',
+      KP_Address: '1600 Pennsylvania Ave NW, Washington, DC 20500, EE. UU',
+      KP_Email: 'barackobama@whitehouse.usa',
+      KP_Phone: '',
+      KP_ID_Pass_Recovery: ''
     });
 
     var profileRecord2 = new KProfileModel({
-      KU_Username: 'theresamay',
-      KU_Password: 'unitedkingdom',
-      KU_Address: '11 Downing Street, Westminster, London, SW1A 2AB, United Kingdom',
-      KU_Email: 'theresamay@unitedkingdom.uk',
-      KU_Phone: '',
-      KU_ID_Pass_Recovery: ''
+      KP_Username: 'theresamay',
+      KP_Password: 'unitedkingdom',
+      KP_Address: '11 Downing Street, Westminster, London, SW1A 2AB, United Kingdom',
+      KP_Email: 'theresamay@unitedkingdom.uk',
+      KP_Phone: '',
+      KP_ID_Pass_Recovery: ''
     });
 
     var userRecord1 = new KUserModel({
