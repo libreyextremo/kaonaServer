@@ -7,7 +7,16 @@ const KUserModel = require('../models/user_model');
 // get art list from the db
 router.get('/', function(req, res){
   console.log('GET api/ request');
-  res.send("<html><body><h1>Welcome to Kaona</h1><p>by JM Sobrinos</p></body></html>");
+  res.send("<html><body><h1>Welcome to Kaona Server</h1><p>by JM Sobrinos</p></body></html>");
+});
+
+// set reply to "localhost:4000/api/art" get request
+// get art list from the db
+router.get('/profile', function(req, res){
+
+  console.log('GET api/profile request');
+  res.send({type: 'GET'});
+
 });
 
 // set reply to "localhost:4000/api/art" get request
