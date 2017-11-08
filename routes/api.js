@@ -10,23 +10,26 @@ router.get('/', function(req, res){
   res.send("<html><body><h1>Welcome to Kaona Server</h1><p>by JM Sobrinos</p></body></html>");
 });
 
-// set reply to "localhost:4000/api/art" get request
+// set reply to "localhost:4000/api/existprofile" get request
 // get art list from the db
-router.get('/profile', function(req, res){
+router.get('/existprofile', function(req, res, next){
 
-  console.log('GET api/profile request');
-  res.send({type: 'GET'});
+  console.log('GET api/existprofile request');
+  console.log('id = ' + req.query.id);
+
+  if (req.query.id != null) {
+      console.log('id != null');
+      KProfileModel.count({KP_Username: req.query.id}, function(err, c){
+          console.log('Count is ' + c);
+          res.json({"results": c});
+        }).catch(next);
+  } else {
+      console.log('id == null');
+      res.json({"results": c});
+  };
 
 });
 
-// set reply to "localhost:4000/api/art" get request
-// get art list from the db
-router.get('/art', function(req, res){
-
-  console.log('GET api/art request');
-  res.send({type: 'GET'});
-
-});
 
 // set reply to "localhost:4000/clients" get request
 // get user and his arts from the db
@@ -47,7 +50,6 @@ router.get('/art', function(req, res, next){
   };
 
 });
-
 
 // add a new art to the db
 router.post('/art', function(req, res){
@@ -78,6 +80,24 @@ router.delete('/art/:id', function(req, res){
   ClientModel.findByIdAndRemove({KU_Username: req.params.usid}).then(function(deletedArt){
     res.send(deletedArt);
   }).catch(next);
+
+});
+
+// set reply to "localhost:4000/api/profile" get request
+// get art list from the db
+router.get('/profile', function(req, res){
+  // TODO
+  console.log('GET api/profile request');
+  res.send({type: 'GET'});
+
+});
+
+// set reply to "localhost:4000/api/art" get request
+// get art list from the db
+router.get('/art', function(req, res){
+  // TODO
+  console.log('GET api/art request');
+  res.send({type: 'GET'});
 
 });
 

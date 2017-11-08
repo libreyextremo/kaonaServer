@@ -10,7 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/libreyextremo/kaonaServer.git"
   },
-  "keywords": [],
+  "keywords": [
+    "kaona",
+    "nodejs",
+    "mongodb",
+    "express",
+    "mocha",
+    "kaonaServer"
+  ],
   "author": "Jose Maria 'Joey' Sobrinos Garcia",
   "license": "ISC",
   "bugs": {
